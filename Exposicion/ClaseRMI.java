@@ -6,12 +6,17 @@ import java.rmi.RemoteException; //Los metodos pueden tener Throws de RemoteExce
 import java.io.File;  // Clase archivo para el metodo leerArchivo
 import java.io.FileNotFoundException;  // Excepcion de archivo no encontrado
 import java.util.Scanner; // Clase Scanner para poder leer archivos
+import java.rmi.server.UnicastRemoteObject; //Clase UnicastRemoteObject, necesaria para poder hacer el bind
 
-public class ClaseRMI implements InterfazRMI{
+public class ClaseRMI extends UnicastRemoteObject implements InterfazRMI{
+    public ClaseRMI() throws RemoteException{
+        super();
+    }    
     /**
      * Este metodo saluda al usuario desde RMI
      * @throws RemoteException Error al invocar el metodo remoto
      */
+    @Override
     public void saludar() throws RemoteException{
         System.out.println("Hola mundo");
     }
@@ -22,6 +27,7 @@ public class ClaseRMI implements InterfazRMI{
      * @return La suma de ambos enteros de 64 bits
      * @throws RemoteException Error al invocar el metodo remoto
      */
+    @Override
     public long sumar(long a, long b) throws RemoteException{
         return a+b;
     }  
@@ -32,6 +38,7 @@ public class ClaseRMI implements InterfazRMI{
      * @return La resta de ambos enteros
      * @throws RemoteException Error al invocar el metodo remoto
      */
+    @Override
     public long restar(long a, long b) throws RemoteException{
         return a-b;
     }
@@ -40,6 +47,7 @@ public class ClaseRMI implements InterfazRMI{
      * @return El contenido del archivo, archivo de prueba
      * @throws RemoteException Error al invocar el metodo remoto
      */
+    @Override
     public String leerArchivo() throws RemoteException{
         String retorno = "";
         try {
