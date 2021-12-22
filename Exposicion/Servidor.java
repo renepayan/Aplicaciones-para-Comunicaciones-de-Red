@@ -1,3 +1,4 @@
+package Exposicion;
 import java.rmi.*; //De aqui extraigo la clase Naming, usare su metodo estatico bind
 public class Servidor{ //Clase servidor, esta es la clase que utilizare para recibir las peticiones
     public static void main(String[] args) throws Exception{

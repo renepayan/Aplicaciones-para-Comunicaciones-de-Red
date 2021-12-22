@@ -2,6 +2,7 @@
  * @author René Payán Téllez
  * Esta es la clase que contiene la implementacion de los metodos remotos a ser invocados
  */
+package Exposicion;
 import java.rmi.RemoteException; //Los metodos pueden tener Throws de RemoteException
 import java.io.File;  // Clase archivo para el metodo leerArchivo
 import java.io.FileNotFoundException;  // Excepcion de archivo no encontrado

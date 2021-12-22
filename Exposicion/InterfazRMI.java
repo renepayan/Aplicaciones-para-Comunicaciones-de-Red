@@ -2,6 +2,7 @@
  * @author René Payán Téllez
  * En esta interfaz se definen los metodos remotos que pueden ser invocados via RMI
  */
+
 import java.rmi.Remote; //La interface tiene que extender de la clase Remote
 import java.rmi.RemoteException; //Los metodos pueden tener Throws de RemoteException
 

@@ -1,5 +1,5 @@
-import java.rmi.Naming; //Se utilizaran el metodo lookup para establecer conexion con el servidor
 
+import java.rmi.Naming; //Se utilizaran el metodo lookup para establecer conexion con el servidor
 public class Cliente {
     public static void main(String[] args) throws Exception{
         String url = "rmi://"+args[0]+"/EjemploRMI"; //Defino la URI a la cual se accesara
